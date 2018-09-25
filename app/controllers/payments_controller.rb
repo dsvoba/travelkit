@@ -6,10 +6,10 @@ class PaymentsController < ApplicationController
   def notify
     id    = params[:order_id].split('-').last
     order = Order.find_by(id: id)
-    
+
     order.fetch_and_update_status if order && order.token == params[:token]
 
-    render nothing: true
+    render body: nil
   end
 
   def success
