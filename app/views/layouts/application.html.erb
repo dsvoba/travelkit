@@ -11,6 +11,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="main">
+      <h1><%= link_to 'Get yourself a Travelkit', root_path %></h1>
+      <div class="nav">
+        <%= link_to 'Orders', orders_path %>
+      </div>
+      <hr><br>
+      <%= yield %>
+    </div>
   </body>
 </html>

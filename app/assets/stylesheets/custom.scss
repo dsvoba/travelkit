@@ -1,0 +1,135 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.main {
+  position: relative;
+  margin: 0 auto;
+  max-width: 768px;
+
+  .nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  > h1 {
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+  }
+}
+
+.list.products {
+  .item {
+    position: relative;
+    padding-left: 300px;
+    min-height: 180px;
+    margin-bottom: 2rem;
+    padding-bottom: 15px;
+
+    img {
+      height: 180px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .name {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .description {
+      margin-bottom: 5px;
+    }
+    .price {
+      color: green;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+    .btn {
+      background: green;
+    }
+  }
+}
+
+.list.orders {
+  display: table;
+  width: 100%;
+
+  .tablehead {
+    font-weight: bold;
+  }
+
+  .item {
+    display: table-row;
+    // background-color: #f9f9f9;
+
+    &.current {
+      background-color: yellow;
+    }
+
+    > div {
+      border-top: 1px solid #f7f7f7;
+      display: table-cell;
+      padding: 6px 6px;
+
+      &.id {
+        width: 10%;
+      }
+      &.description {
+        width: 50%;
+      }
+      &.status {
+        width: 10%;
+
+        span {
+          display: inline-block;
+          padding: 2px 4px;
+          border-radius: 3px;
+          color: white;
+        }
+
+        &.pending span {
+          background-color: orange; 
+        }
+        &.paid span {
+          background-color: limegreen; 
+        }
+        &.invalid span {
+          background-color: red; 
+        }
+        &.unpaid span {
+          background-color: gray; 
+        }
+        &.failure span {
+          background-color: black; 
+        }
+      }
+      &.total {
+        width: 10%;
+      }
+      &.created_at {
+        width: 20%;
+        text-align: right;
+
+      }
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  min-width: 80px;
+  background: #eee;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 8px;
+  font-size: 1rem;
+}
